@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.lib.spring3.MYECLIPSE_SPRING30_WEB"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/aop/com.springsource.net.sf.cglib-2.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/aop/com.springsource.org.aopalliance-1.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/aop/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/aop/org.springframework.aop-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/aop/org.springframework.aspects-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/aop/org.springframework.instrument.tomcat-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/aop/org.springframework.instrument-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/core/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/core/com.springsource.org.apache.log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/core/jmxtools-1.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/core/org.springframework.asm-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/core/org.springframework.beans-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/core/org.springframework.context-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/core/org.springframework.core-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/core/org.springframework.expression-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/persistCore/org.springframework.jdbc-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/persistCore/org.springframework.orm-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/persistCore/org.springframework.transaction-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/persistCore/persistence.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/persistJdbc/com.springsource.com.mchange.v2.c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/persistJdbc/com.springsource.org.apache.commons.lang-2.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/persistJdbc/com.springsource.org.apache.commons.pool-1.5.3.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/persistJdbc/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/persistJdbc/jotm.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/persistJdbc/xapool.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/web/com.springsource.org.apache.commons.fileupload-1.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/web/com.springsource.org.apache.commons.httpclient-3.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/web/com.springsource.org.codehaus.jackson.mapper-1.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/web/org.springframework.oxm-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/web/org.springframework.web.portlet-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/web/org.springframework.web.servlet-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/web/org.springframework.web.struts-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/spring3/web/org.springframework.web-3.0.1.RELEASE-A.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/entitymanager/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/entitymanager/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/entitymanager/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/entitymanager/hibernate-entitymanager.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/entitymanager/hibernate-validator.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Advanced Support/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Advanced Support/jboss-cache-1.4.1.GA.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Advanced Support/jbosscache-core-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Advanced Support/oscache-2.1.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Advanced Support/proxool-0.8.3.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Advanced Support/swarmcache-1.0RC2.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Core/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Core/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Core/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Core/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Core/ehcache-1.2.3.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Core/hibernate3.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Core/javassist-3.9.0.GA.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Core/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Core/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Core/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="D:/myJars/hibernate/Hibernate 3.3 Core/slf4j-log4j12-1.5.8.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

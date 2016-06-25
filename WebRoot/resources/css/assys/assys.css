@@ -1,0 +1,69 @@
+@charset "utf-8";
+/*---------------cms_column_forList.jsp---------------*/
+.datagrid_div{
+	width:780px;
+	margin-left:5px;
+}
+
+.link_button_div{
+}
+.button_position_link{
+}
+.message_div{
+	width:200px;
+	color:red;
+	height:25px;
+	display:block;
+	float:right;
+	line-height:25px;
+	text-align:right;
+	padding-top:2px;
+	padding-right:9px;
+}
+/*---------------cms_article_forUpdate.jsp---------------*/
+
+/*---------------cms_common样式---------------*/
+.column_head_word{
+	margin-top:20x;
+	font-weight:bold;
+	margin-left:20px;
+	font-size:13px;
+	float:left;
+	margin-top:8px;
+	font-color:#032646;
+}
+.column_head_word2{
+	font-weight:bold;
+	font-size:13px;
+	font-color:#032646;
+}
+.span_icon_head{
+	text-align:right;
+	display:block;
+	padding-right:25px;
+	width:780px;
+}
+.span_bot_mt{
+	display:block;
+	float:right;
+	margin-top:0px;
+	margin-right:10px;
+}
+.icon_margin{
+	margin-top:9px;
+}
+.need_color{
+	color:red;
+}
+.title_input{
+	width:450px;
+	height:20px;
+	border:1px solid #95B8E7;
+	line-height:20px;
+}
+.head_title_css{
+	float:left;
+	margin-left:40px;
+	margin-top:20px;
+}
+/*---------------cms_common end---------------*/

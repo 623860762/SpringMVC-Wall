@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+ xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+<!-- 配置spring-mvc的解析包 -->
+	<context:component-scan
+		base-package="com.ceit.ebs.cn.assys.expertScore.controller" />
+		
+	<bean id="tableDao" class="com.ceit.common.dao.impl.TableDao">
+	   <property name="sessionFactory">
+	      <ref bean="sessionFactory"/>
+	   </property>
+	</bean>
+	
+	<bean id="expertScoreServiceTarget" class="com.ceit.ebs.cn.assys.expertScore.services.impl.ExpertScoreService">
+	    <property name="tableDao">
+	      <ref local="tableDao"/>
+	    </property>
+	</bean>
+	
+	<bean id="expertScoreService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" >
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property> 
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props> 
+		</property>
+		<property name="target">
+			<ref local="expertScoreServiceTarget" />
+		</property>
+	</bean> 
+	
+	<bean id="expertScoreController" class="com.ceit.ebs.cn.assys.expertScore.controller.ExpertScoreController">
+		<property name="expertScoreService">
+    		<ref local="expertScoreService" />  		  
+  		</property>
+		<property name="assWallService">
+    		<ref bean="assWallService" />  		  
+  		</property>
+  		<property name="methodNameResolver">
+            <ref bean="paraMethodResolver"/>
+        </property>
+     	<!--mappings属性将依赖注入expertScoreController类,用于获取jsp视图路径-->
+		<property name="mappings">
+			<props>
+				<!--配置jsp的路径,不需要后缀名-->
+				<prop key="forListContent">appjsps/assys/expertScore/forListContent</prop>
+				<prop key="forExpScoreList">appjsps/assys/expertScore/forExpScoreList</prop>
+				<prop key="forExpScorePersist">appjsps/assys/expertScore/forExpScorePersist</prop>
+				<prop key="forExpScoreMerge">appjsps/assys/expertScore/forExpScoreMerge</prop>
+				<prop key="msg">appjsps/assys/expertScore/msg</prop>
+       		</props>
+		</property>
+	</bean>
+	
+</beans>

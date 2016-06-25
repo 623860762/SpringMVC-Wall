@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+ xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+<!-- 配置spring-mvc自动解析的包 -->
+	<context:component-scan
+		base-package="com.ceit.ebs.cn.assys.wall.controller" />
+		
+	<bean id="tableDao" class="com.ceit.common.dao.impl.TableDao">
+	   <property name="sessionFactory">
+	      <ref bean="sessionFactory"/>
+	   </property>
+	</bean>
+ 
+	<bean id="assWallServiceTarget" class="com.ceit.ebs.cn.assys.wall.services.impl.AssWallService">
+	    <property name="tableDao">
+	      <ref local="tableDao"/>
+	    </property>
+	</bean>
+	
+	<bean id="assWallService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" >
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property> 
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props> 
+		</property>
+		<property name="target">
+			<ref local="assWallServiceTarget" />
+		</property>
+	</bean> 
+	
+	
+	<bean id="assWallController" class="com.ceit.ebs.cn.assys.wall.controller.AssWallController">
+		<property name="assWallService">
+    		<ref local="assWallService" />  		  
+  		</property>
+		<property name="expertScoreService">
+    		<ref bean="expertScoreService" />  		  
+  		</property>
+		<property name="overallScoreService">
+    		<ref bean="overallScoreService" />  		  
+  		</property>
+		<property name="detailScoreService">
+    		<ref bean="detailScoreService" />  		  
+  		</property>
+  		  		<property name="methodNameResolver">
+            <ref bean="paraMethodResolver"/>
+        </property>
+     	<!--mappings属性将依赖注入expertScoreController类,用于获取jsp视图路径-->
+		<property name="mappings">
+			<props>
+				<!--配置jsp的路径,不需要后缀名-->
+				<prop key="forListContent">appjsps/assys/wall/forListContent</prop>
+				<prop key="forWall">appjsps/assys/wall/forWall</prop>
+				<prop key="forOverScore">appjsps/assys/wall/forOverScore</prop>
+				<prop key="forDetailScore">appjsps/assys/wall/forDetailScore</prop>
+				<prop key="forWallList">appjsps/assys/wall/forWallList</prop>
+				<prop key="forWallMerge">appjsps/assys/wall/forWallMerge</prop>
+				<prop key="forWallPersist">appjsps/assys/wall/forWallPersist</prop>
+				<prop key="msg">appjsps/assys/wall/msg</prop>
+				<prop key="forWallStatus">appjsps/assys/wall/forWallStatus</prop>
+				<prop key="newIndex">appjsps/assys/wall/newindex</prop>
+				<prop key="newSubmit2">appjsps/assys/wall/newSubmit2</prop>
+				<prop key="newWeight3">appjsps/assys/wall/newWeight3</prop>
+				<prop key="newView4">appjsps/assys/wall/newView4</prop>
+				<prop key="newMaterial5">appjsps/assys/wall/newMaterial5</prop>
+				<prop key="newPower6">appjsps/assys/wall/newPower6</prop>
+				<prop key="newResult7">appjsps/assys/wall/newResult7</prop>
+       		</props>
+		</property>
+	</bean>
+	
+</beans>
